@@ -170,16 +170,19 @@ body {
 .timer {
    position: absolute;
    bottom: auto;
-   top: 86%;
+   top: 83%;
    left: 50%;
    transform: translate(-62%, 0);
    text-align: center;
    display: inline-block;
-   opacity: 0;
+   opacity: 1;
    @media (max-width: 991px) {
-      top: 96%;
+      top: 48%;
       left: 50%;
       transform: translate(-50%, 0);
+   }
+   @media (max-width: 767px) {
+      top: 46%;
    }
    &.timer__two {
       bottom: auto;
@@ -207,7 +210,9 @@ body {
       font-weight: bold;
       padding: 5px 28px;
       border-radius: 10px;
-      background: $redColor;
+      background-color: transparent;
+      border: 2px solid $redColor;
+      color: $redColor;
 
       @media (max-width: 767px) {
          font-size: 16px;
@@ -448,8 +453,8 @@ body {
 .video {
    position: absolute;
    top: auto;
-   bottom: 15%;
-   width: 63%;
+   bottom: 20%;
+   width: 31%;
    left: 50%;
    transform: translate(-50%, 0);
    video {
@@ -470,13 +475,42 @@ body {
    }
    @media (max-width: 991px) {
       bottom: auto;
-      top: 32%;
+      top: 30%;
       transform: translate(-50%, -50%);
-      width: 84%;
+      width: 52%;
    }
    @media (max-width: 767px) {
       bottom: auto;
-      top: 33%;
+      top: 29%;
       width: 95%;
+   }
+}
+
+.heading {
+   position: absolute;
+   top: 40%;
+   left: 25%;
+   z-index: 3;
+   color: #fff;
+   font-size: 19px;
+   @media (max-width: 991px) {
+      left: 50%;
+      transform: translate(-50%, 0);
+      top: auto;
+      bottom: 15%;
+   }
+   a {
+      background: #fcba00;
+      color: #fff;
+      padding: 5px 55px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s all ease-in-out;
+      @media (max-width: 767px) {
+         padding: 5px 30px;
+      }
+      &:hover {
+         transform: translateY(-2px);
+      }
    }
 }
