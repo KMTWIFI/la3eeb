@@ -509,6 +509,10 @@ body {
       @media (max-width: 767px) {
          padding: 5px 30px;
       }
+      &.no-active {
+         cursor: no-drop;
+         background: #ffdb77;
+      }
       &:hover {
          transform: translateY(-2px);
       }

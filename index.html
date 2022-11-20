@@ -35,7 +35,9 @@
    <link rel="stylesheet" href="assets/css/styles.min.css" />
    <script>
       var secondsOne = 35;
+      var secondsTwo = 30;
       var fooOne;
+      var fooTwo;
 
       function redirectOne() {
          document.location.href = "https://www.la3eeb.com/play?country=eg";
@@ -48,6 +50,12 @@
             clearInterval(fooOne);
             document.getElementById("secondsOne").innerHTML = "التالي";
             redirectOne();
+         }
+         secondsTwo--;
+         if (secondsTwo == -1) {
+            clearInterval(secondsTwo);
+            document.querySelector(".heading a").classList.remove('no-active');
+            document.querySelector(".heading a").setAttribute('href', 'https://www.la3eeb.com/play?country=eg');
          }
       }
 
@@ -77,7 +85,7 @@
          </video>
       </div>
       <div class="heading">
-         <a href="https://www.la3eeb.com/play?country=eg" target="_blank">ألعب</a>
+         <a class="no-active" target="_blank">ألعب</a>
       </div>
    </div>
 </body>
