@@ -180,6 +180,10 @@ body {
       top: 48%;
       left: 50%;
       transform: translate(-50%, 0);
+      &.timer__v2 {
+         top: auto;
+         bottom: 17%;
+      }
    }
    @media (max-width: 767px) {
       top: 46%;
@@ -433,13 +437,6 @@ body {
          }
       }
    }
-   &.banner__two {
-      .images {
-         img {
-            object-fit: fill;
-         }
-      }
-   }
 }
 
 .spk-stand-wg.sp-mobile .sp-title-container p {
@@ -457,27 +454,22 @@ body {
    width: 31%;
    left: 50%;
    transform: translate(-50%, 0);
+   &.video__v2 {
+      width: 40%;
+   }
    video {
       width: 100%;
       max-height: 500px;
-   }
-   &.video__two {
-      left: 4%;
-      @media (max-width: 991px) {
-         left: 50%;
-         bottom: 21%;
-         transform: translate(-50%, 0);
-         width: 53%;
-      }
-      @media (max-width: 767px) {
-         width: 86%;
-      }
    }
    @media (max-width: 991px) {
       bottom: auto;
       top: 30%;
       transform: translate(-50%, -50%);
       width: 52%;
+      &.video__v2 {
+         width: 60%;
+         top: 62%;
+      }
    }
    @media (max-width: 767px) {
       bottom: auto;
@@ -493,6 +485,17 @@ body {
    z-index: 3;
    color: #fff;
    font-size: 19px;
+   &.heading__v2 {
+      position: absolute;
+      top: 33%;
+      left: 42%;
+      z-index: 3;
+      color: #fff;
+      font-size: 54px;
+      transform-origin: center center;
+      transform: rotate(-5deg);
+      opacity: 0;
+   }
    @media (max-width: 991px) {
       left: 50%;
       transform: translate(-50%, 0);
