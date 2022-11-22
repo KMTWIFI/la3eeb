@@ -168,47 +168,48 @@ body {
 }
 
 .timer {
-   position: absolute;
-   bottom: auto;
-   top: 83%;
-   left: 50%;
-   transform: translate(-50%, 0);
+   // position: absolute;
+   // bottom: auto;
+   // top: 83%;
+   // left: 50%;
+   // transform: translate(-50%, 0);
    text-align: center;
    display: flex;
    align-items: center;
    opacity: 1;
    width: 100%;
    justify-content: center;
-   @media (max-width: 991px) {
-      top: 46%;
-      left: 50%;
-      transform: translate(-50%, 0);
-      &.timer__v2 {
-         top: auto;
-         bottom: 17%;
-      }
-   }
-   @media (max-width: 767px) {
-      top: 44%;
-   }
-   &.timer__two {
-      bottom: auto;
-      top: 90%;
-      left: 5%;
-      text-align: center;
-      display: inline-block;
-      .time {
-         background-color: #ee1c25;
-      }
-      @media (max-width: 991px) {
-         left: 24%;
-         top: 93%;
-      }
-      @media (max-width: 767px) {
-         left: 18%;
-         top: 92%;
-      }
-   }
+   margin-top: 10px;
+   // @media (max-width: 991px) {
+   //    top: 46%;
+   //    left: 50%;
+   //    transform: translate(-50%, 0);
+   //    &.timer__v2 {
+   //       top: auto;
+   //       bottom: 17%;
+   //    }
+   // }
+   // @media (max-width: 767px) {
+   //    top: 44%;
+   // }
+   // &.timer__two {
+   //    bottom: auto;
+   //    top: 90%;
+   //    left: 5%;
+   //    text-align: center;
+   //    display: inline-block;
+   //    .time {
+   //       background-color: #ee1c25;
+   //    }
+   //    @media (max-width: 991px) {
+   //       left: 24%;
+   //       top: 93%;
+   //    }
+   //    @media (max-width: 767px) {
+   //       left: 18%;
+   //       top: 92%;
+   //    }
+   // }
    .time {
       min-width: 52px;
       text-align: center;
@@ -473,7 +474,7 @@ body {
 .video {
    position: absolute;
    top: auto;
-   bottom: 20%;
+   bottom: 14%;
    width: 31%;
    left: 50%;
    transform: translate(-50%, 0);
@@ -486,9 +487,9 @@ body {
    }
    @media (max-width: 991px) {
       bottom: auto;
-      top: 30%;
+      top: 33%;
       transform: translate(-50%, -50%);
-      width: 52%;
+      width: 47%;
       &.video__v2 {
          width: 60%;
          top: 62%;
@@ -496,8 +497,8 @@ body {
    }
    @media (max-width: 767px) {
       bottom: auto;
-      top: 29%;
-      width: 95%;
+      top: 33%;
+      width: 89%;
    }
 }
 
