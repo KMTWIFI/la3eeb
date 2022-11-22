@@ -97,38 +97,38 @@
       />
       <link rel="stylesheet" href="assets/css/styles.min.css" />
       <script>
-         // var secondsOne = 35;
-         // var secondsTwo = 30;
-         // var fooOne;
-         // var fooTwo;
+         var secondsOne = 35;
+         var secondsTwo = 30;
+         var fooOne;
+         var fooTwo;
 
-         // function redirectOne() {
-         //    document.location.href = "https://www.la3eeb.com/play?country=eg";
-         // }
+         function redirectOne() {
+            document.location.href = "https://www.la3eeb.com/play?country=eg";
+         }
 
-         // function updateSecsOne() {
-         //    document.getElementById("secondsOne").innerHTML = secondsOne;
-         //    secondsOne--;
-         //    if (secondsOne == -1) {
-         //       clearInterval(fooOne);
-         //       document.getElementById("secondsOne").innerHTML = "التالي";
-         //       redirectOne();
-         //    }
-         //    secondsTwo--;
-         //    if (secondsTwo == -1) {
-         //       clearInterval(secondsTwo);
-         //       document.querySelector(".heading a").classList.remove('no-active');
-         //       document.querySelector(".heading a").setAttribute('href', 'https://www.la3eeb.com/play?country=eg');
-         //    }
-         // }
+         function updateSecsOne() {
+            document.getElementById("secondsOne").innerHTML = secondsOne;
+            secondsOne--;
+            if (secondsOne == -1) {
+               clearInterval(fooOne);
+               document.getElementById("secondsOne").innerHTML = "التالي";
+               redirectOne();
+            }
+            secondsTwo--;
+            if (secondsTwo == -1) {
+               clearInterval(secondsTwo);
+               document.querySelector(".heading a").classList.remove('no-active');
+               document.querySelector(".heading a").setAttribute('href', 'https://www.la3eeb.com/play?country=eg');
+            }
+         }
 
-         // function countdownTimer() {
-         //    fooOne = setInterval(function () {
-         //       updateSecsOne();
-         //    }, 1000);
-         // }
+         function countdownTimer() {
+            fooOne = setInterval(function () {
+               updateSecsOne();
+            }, 1000);
+         }
 
-         // countdownTimer();
+         countdownTimer();
       </script>
    </head>
 
