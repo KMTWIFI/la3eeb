@@ -172,12 +172,15 @@ body {
    bottom: auto;
    top: 83%;
    left: 50%;
-   transform: translate(-62%, 0);
+   transform: translate(-50%, 0);
    text-align: center;
-   display: inline-block;
+   display: flex;
+   align-items: center;
    opacity: 1;
+   width: 100%;
+   justify-content: center;
    @media (max-width: 991px) {
-      top: 48%;
+      top: 46%;
       left: 50%;
       transform: translate(-50%, 0);
       &.timer__v2 {
@@ -186,7 +189,7 @@ body {
       }
    }
    @media (max-width: 767px) {
-      top: 46%;
+      top: 44%;
    }
    &.timer__two {
       bottom: auto;
@@ -220,6 +223,26 @@ body {
 
       @media (max-width: 767px) {
          font-size: 16px;
+      }
+   }
+   a {
+      display: inline-block;
+      margin-right: 10px;
+      background: #fcba00;
+      color: #fff;
+      padding: 10px 55px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s all ease-in-out;
+      @media (max-width: 767px) {
+         padding: 5px 30px;
+      }
+      &.no-active {
+         cursor: no-drop;
+         background: #ffdb77;
+      }
+      &:hover {
+         transform: translateY(-2px);
       }
    }
 }
