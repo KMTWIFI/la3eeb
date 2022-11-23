@@ -116,58 +116,59 @@
          </div>
       </div>
       <script>
-         const vid = document.getElementById("vid");
-         const playPromise = vid.play();
-         if (playPromise !== undefined) {
-            playPromise
-               .then((_) => {
-                  let secondsOne = 35;
-                  let secondsTwo = 30;
-                  let fooOne;
-                  let fooTwo;
+         document.addEventListener("DOMContentLoaded", function () {
+            const vid = document.getElementById("vid");
+            vid.pause();
+            vid.currentTime = 0;
+            var noPromise = {
+               catch: new Function(),
+            };
+            if (vid) {
+               (vid.play() || noPromise).catch(function () {});
+               let secondsOne = 35;
+               let secondsTwo = 30;
+               let fooOne;
+               let fooTwo;
 
-                  function redirectOne() {
-                     document.location.href =
-                        "https://www.la3eeb.com/play?country=eg";
+               function redirectOne() {
+                  document.location.href =
+                     "https://www.la3eeb.com/play?country=eg";
+               }
+
+               function updateSecsOne() {
+                  document.getElementById("secondsOne").innerHTML = secondsOne;
+                  secondsOne--;
+                  if (secondsOne == -1) {
+                     clearInterval(fooOne);
+                     document.getElementById("secondsOne").innerHTML = "التالي";
+                     redirectOne();
                   }
-
-                  function updateSecsOne() {
-                     document.getElementById("secondsOne").innerHTML =
-                        secondsOne;
-                     secondsOne--;
-                     if (secondsOne == -1) {
-                        clearInterval(fooOne);
-                        document.getElementById("secondsOne").innerHTML =
-                           "التالي";
-                        redirectOne();
-                     }
-                     secondsTwo--;
-                     if (secondsTwo == -1) {
-                        clearInterval(secondsTwo);
-                        document
-                           .querySelector(".timer a")
-                           .classList.remove("no-active");
-                        document
-                           .querySelector(".timer a")
-                           .setAttribute(
-                              "href",
-                              "https://www.la3eeb.com/play?country=eg"
-                           );
-                     }
+                  secondsTwo--;
+                  if (secondsTwo == -1) {
+                     clearInterval(secondsTwo);
+                     document
+                        .querySelector(".timer a")
+                        .classList.remove("no-active");
+                     document
+                        .querySelector(".timer a")
+                        .setAttribute(
+                           "href",
+                           "https://www.la3eeb.com/play?country=eg"
+                        );
                   }
+               }
 
-                  function countdownTimer() {
-                     fooOne = setInterval(function () {
-                        updateSecsOne();
-                     }, 1000);
-                  }
+               function countdownTimer() {
+                  fooOne = setInterval(function () {
+                     updateSecsOne();
+                  }, 1000);
+               }
 
-                  countdownTimer();
-                  console.log(vid);
-                  vid.muted = false;
-               })
-               .catch((error) => {});
-         }
+               countdownTimer();
+            } else {
+               vid.pause().catch((err) => console.log(err));
+            }
+         });
       </script>
    </body>
 </html>
