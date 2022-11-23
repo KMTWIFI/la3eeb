@@ -149,7 +149,7 @@ $redColor: #fcbb01;
 }
 
 body {
-   font-family: "Tajawal", sans-serif;
+   font-family: "Cairo", sans-serif;
    font-weight: 600;
    min-height: 100vh;
    display: flex;
@@ -478,27 +478,48 @@ body {
    width: 31%;
    left: 50%;
    transform: translate(-50%, 0);
-   &.video__v2 {
-      width: 40%;
-   }
-   video {
-      width: 100%;
-      max-height: 500px;
-   }
    @media (max-width: 991px) {
       bottom: auto;
       top: 33%;
       transform: translate(-50%, -50%);
       width: 47%;
-      &.video__v2 {
-         width: 60%;
-         top: 62%;
-      }
    }
    @media (max-width: 767px) {
       bottom: auto;
       top: 33%;
       width: 89%;
+   }
+   &.video__two {
+      bottom: 24%;
+      width: 30%;
+      @media (max-width: 991px) {
+         bottom: auto;
+         top: 62%;
+         transform: translate(-50%, -50%);
+         width: 47%;
+      }
+      @media (max-width: 767px) {
+         top: 63%;
+         width: 82%;
+      }
+   }
+   &.video__three {
+      bottom: 14%;
+      width: 38%;
+      @media (max-width: 991px) {
+         bottom: auto;
+         top: 58%;
+         transform: translate(-50%, -50%);
+         width: 60%;
+      }
+      @media (max-width: 767px) {
+         top: 57%;
+         width: 88%;
+      }
+   }
+   video {
+      width: 100%;
+      max-height: 500px;
    }
 }
 
