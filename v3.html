@@ -101,73 +101,43 @@
    <body>
       <div class="banner__one">
          <div class="images">
-            <img src="assets/images/1400x900x2.jpg" class="lg" alt="" />
-            <img src="assets/images/1440x2560x2.jpg" class="md" alt="" />
-            <img src="assets/images/1440x2560x2.jpg" class="sm" alt="" />
+            <img src="assets/images/journey.jpeg" class="lg" alt="" />
+            <img src="assets/images/journey.jpeg" class="md" alt="" />
+            <img src="assets/images/journey.jpeg" class="sm" alt="" />
          </div>
-         <div class="video video__three">
-            <video autoplay="autoplay" id="vid" playsinline muted loop controls>
-               <source src="assets/videos/KMT video.mp4" type="video/mp4" />
-            </video>
+         <div class="video video__two video__two__journey">
             <div class="timer">
-               <span class="time" id="secondsOne">35</span>
-               <a class="no-active" target="_blank">ألعب مجانا</a>
+               <span class="time" id="secondsOne">10</span>
             </div>
          </div>
       </div>
       <script>
          document.addEventListener("DOMContentLoaded", function () {
-            const vid = document.getElementById("vid");
-            vid.pause();
-            vid.currentTime = 0;
-            var noPromise = {
-               catch: new Function(),
-            };
-            if (vid) {
-               (vid.play() || noPromise).catch(function () {});
-               let secondsOne = 35;
-               let secondsTwo = 30;
-               let fooOne;
-               let fooTwo;
+            let secondsOne = 10;
+            let fooOne;
 
-               function redirectOne() {
-                  document.location.href =
-                     "https://www.la3eeb.com/play?country=eg";
-               }
-
-               function updateSecsOne() {
-                  document.getElementById("secondsOne").innerHTML = secondsOne;
-                  secondsOne--;
-                  if (secondsOne == -1) {
-                     clearInterval(fooOne);
-                     document.getElementById("secondsOne").innerHTML = "التالي";
-                     redirectOne();
-                  }
-                  secondsTwo--;
-                  if (secondsTwo == -1) {
-                     clearInterval(secondsTwo);
-                     document
-                        .querySelector(".timer a")
-                        .classList.remove("no-active");
-                     document
-                        .querySelector(".timer a")
-                        .setAttribute(
-                           "href",
-                           "https://www.la3eeb.com/play?country=eg"
-                        );
-                  }
-               }
-
-               function countdownTimer() {
-                  fooOne = setInterval(function () {
-                     updateSecsOne();
-                  }, 1000);
-               }
-
-               countdownTimer();
-            } else {
-               vid.pause().catch((err) => console.log(err));
+            function redirectOne() {
+               document.location.href =
+                  "https://kmtwifi.github.io/la3eeb/v2-2.html";
             }
+
+            function updateSecsOne() {
+               document.getElementById("secondsOne").innerHTML = secondsOne;
+               secondsOne--;
+               if (secondsOne == -1) {
+                  clearInterval(fooOne);
+                  document.getElementById("secondsOne").innerHTML = "التالي";
+                  redirectOne();
+               }
+            }
+
+            function countdownTimer() {
+               fooOne = setInterval(function () {
+                  updateSecsOne();
+               }, 1000);
+            }
+
+            countdownTimer();
          });
       </script>
    </body>
