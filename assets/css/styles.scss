@@ -502,6 +502,12 @@ body {
          top: 63%;
          width: 82%;
       }
+      &.video__two__journey {
+         top: 79%;
+         @media (max-width: 991px) {
+            top: 77%;
+         }
+      }
    }
    &.video__three {
       bottom: 14%;
